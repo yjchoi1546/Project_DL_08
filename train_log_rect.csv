@@ -1,0 +1,2 @@
+epoch,train_loss,train_acc,train_macroF1,lr,epoch_sec
+1,0.445156,0.782574,0.776258,0.00030000,5934.64
