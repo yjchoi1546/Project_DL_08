@@ -738,6 +738,20 @@ wheels = [
 ]
 
 [[package]]
+name = "fastapi"
+version = "0.116.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "pydantic" },
+    { name = "starlette" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/78/d7/6c8b3bfe33eeffa208183ec037fee0cce9f7f024089ab1c5d12ef04bd27c/fastapi-0.116.1.tar.gz", hash = "sha256:ed52cbf946abfd70c5a0dccb24673f0670deeb517a88b3544d03c2a6bf283143", size = 296485, upload-time = "2025-07-11T16:22:32.057Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e5/47/d63c60f59a59467fda0f93f46335c9d18526d7071f025cb5b89d5353ea42/fastapi-0.116.1-py3-none-any.whl", hash = "sha256:c46ac7c312df840f0c9e220f7964bada936781bc4e2e6eb71f1c4d7553786565", size = 95631, upload-time = "2025-07-11T16:22:30.485Z" },
+]
+
+[[package]]
 name = "fastjsonschema"
 version = "2.21.2"
 source = { registry = "https://pypi.org/simple" }
@@ -1608,12 +1622,38 @@ wheels = [
 ]
 
 [[package]]
+name = "koreanize-matplotlib"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "matplotlib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/9b/7b/56c3ec7f9fcf806bbe46f5ed4f3966222faf7891279751c8384d6200eab9/koreanize-matplotlib-0.1.1.tar.gz", hash = "sha256:0930075aac18aab8bc871fc76134776b8bc240bd1cd2acfc00ebd3713323c444", size = 7926102, upload-time = "2022-12-27T09:02:35.257Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ef/91/93f56a4526d2dbead44250d9166d97568c2ce051c90eaa4be36788d59131/koreanize_matplotlib-0.1.1-py3-none-any.whl", hash = "sha256:4f563db1a75d9eb6bdb667a435adf8a5daf7e41504486f1b0fb1c20e4bfed4ca", size = 7945390, upload-time = "2022-12-27T09:02:28.212Z" },
+]
+
+[[package]]
 name = "lark"
 version = "1.2.2"
 source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/af/60/bc7622aefb2aee1c0b4ba23c1446d3e30225c8770b38d7aedbfb65ca9d5a/lark-1.2.2.tar.gz", hash = "sha256:ca807d0162cd16cef15a8feecb862d7319e7a09bdb13aef927968e45040fed80", size = 252132, upload-time = "2024-08-13T19:49:00.652Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2d/00/d90b10b962b4277f5e64a78b6609968859ff86889f5b898c1a778c06ec00/lark-1.2.2-py3-none-any.whl", hash = "sha256:c2276486b02f0f1b90be155f2c8ba4a8e194d42775786db622faccd652d8e80c", size = 111036, upload-time = "2024-08-13T19:48:58.603Z" },
+]
+
+[[package]]
+name = "lightning-utilities"
+version = "0.15.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+    { name = "setuptools" },
+    { name = "typing-extensions" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b8/39/6fc58ca81492db047149b4b8fd385aa1bfb8c28cd7cacb0c7eb0c44d842f/lightning_utilities-0.15.2.tar.gz", hash = "sha256:cdf12f530214a63dacefd713f180d1ecf5d165338101617b4742e8f22c032e24", size = 31090, upload-time = "2025-08-06T13:57:39.242Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/de/73/3d757cb3fc16f0f9794dd289bcd0c4a031d9cf54d8137d6b984b2d02edf3/lightning_utilities-0.15.2-py3-none-any.whl", hash = "sha256:ad3ab1703775044bbf880dbf7ddaaac899396c96315f3aa1779cec9d618a9841", size = 29431, upload-time = "2025-08-06T13:57:38.046Z" },
 ]
 
 [[package]]
@@ -2492,8 +2532,10 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "datetime" },
+    { name = "fastapi" },
     { name = "grad-cam" },
     { name = "jupyter" },
+    { name = "koreanize-matplotlib" },
     { name = "matplotlib" },
     { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
     { name = "numpy", version = "2.3.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
@@ -2501,6 +2543,7 @@ dependencies = [
     { name = "pandas" },
     { name = "pathlib" },
     { name = "pydantic" },
+    { name = "python-multipart" },
     { name = "scikit-learn" },
     { name = "seaborn" },
     { name = "streamlit" },
@@ -2508,10 +2551,12 @@ dependencies = [
     { name = "tensor" },
     { name = "tensorboard" },
     { name = "tensorboardx" },
+    { name = "torchmetrics" },
     { name = "torchsummary" },
     { name = "torchvision" },
     { name = "tqdm" },
     { name = "transformers" },
+    { name = "uvicorn" },
     { name = "wandb" },
     { name = "xgboost" },
 ]
@@ -2519,14 +2564,17 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "datetime", specifier = ">=5.5" },
+    { name = "fastapi", specifier = ">=0.116.1" },
     { name = "grad-cam", specifier = ">=1.5.5" },
     { name = "jupyter", specifier = ">=1.1.1" },
+    { name = "koreanize-matplotlib", specifier = ">=0.1.1" },
     { name = "matplotlib", specifier = ">=3.10.5" },
     { name = "numpy", specifier = ">=2.2.6" },
     { name = "optuna", specifier = ">=4.5.0" },
     { name = "pandas", specifier = ">=2.3.1" },
     { name = "pathlib", specifier = ">=1.0.1" },
     { name = "pydantic", specifier = ">=2.11.7" },
+    { name = "python-multipart", specifier = ">=0.0.20" },
     { name = "scikit-learn", specifier = ">=1.7.1" },
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "streamlit", specifier = ">=1.48.1" },
@@ -2534,10 +2582,12 @@ requires-dist = [
     { name = "tensor", specifier = ">=0.3.6" },
     { name = "tensorboard", specifier = ">=2.20.0" },
     { name = "tensorboardx", specifier = ">=2.6.4" },
+    { name = "torchmetrics", specifier = ">=1.8.1" },
     { name = "torchsummary", specifier = ">=1.5.1" },
     { name = "torchvision", specifier = ">=0.23.0" },
     { name = "tqdm", specifier = ">=4.67.1" },
     { name = "transformers", specifier = ">=4.55.3" },
+    { name = "uvicorn", specifier = ">=0.35.0" },
     { name = "wandb", specifier = ">=0.21.1" },
     { name = "xgboost", specifier = ">=3.0.4" },
 ]
@@ -2836,6 +2886,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/9e/de/d3144a0bceede957f961e975f3752760fbe390d57fbe194baf709d8f1f7b/python_json_logger-3.3.0.tar.gz", hash = "sha256:12b7e74b17775e7d565129296105bbe3910842d9d0eb083fc83a6a617aa8df84", size = 16642, upload-time = "2025-03-07T07:08:27.301Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/08/20/0f2523b9e50a8052bc6a8b732dfc8568abbdc42010aef03a2d750bdab3b2/python_json_logger-3.3.0-py3-none-any.whl", hash = "sha256:dd980fae8cffb24c13caf6e158d3d61c0d6d22342f932cb6e9deedab3d35eec7", size = 15163, upload-time = "2025-03-07T07:08:25.627Z" },
+]
+
+[[package]]
+name = "python-multipart"
+version = "0.0.20"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f3/87/f44d7c9f274c7ee665a29b885ec97089ec5dc034c7f3fafa03da9e39a09e/python_multipart-0.0.20.tar.gz", hash = "sha256:8dd0cab45b8e23064ae09147625994d090fa46f5b0d1e13af944c331a7fa9d13", size = 37158, upload-time = "2024-12-16T19:45:46.972Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/58/38b5afbc1a800eeea951b9285d3912613f2603bdf897a4ab0f4bd7f405fc/python_multipart-0.0.20-py3-none-any.whl", hash = "sha256:8a62d3a8335e06589fe01f2a3e178cdcc632f3fbe0d492ad9ee0ec35aab1f104", size = 24546, upload-time = "2024-12-16T19:45:44.423Z" },
 ]
 
 [[package]]
@@ -3634,6 +3693,19 @@ wheels = [
 ]
 
 [[package]]
+name = "starlette"
+version = "0.47.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+    { name = "typing-extensions", marker = "python_full_version < '3.13'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/15/b9/cc3017f9a9c9b6e27c5106cc10cc7904653c3eec0729793aec10479dd669/starlette-0.47.3.tar.gz", hash = "sha256:6bc94f839cc176c4858894f1f8908f0ab79dfec1a6b8402f6da9be26ebea52e9", size = 2584144, upload-time = "2025-08-24T13:36:42.122Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ce/fd/901cfa59aaa5b30a99e16876f11abe38b59a1a2c51ffb3d7142bb6089069/starlette-0.47.3-py3-none-any.whl", hash = "sha256:89c0778ca62a76b826101e7c709e70680a1699ca7da6b44d38eb0a7e61fe4b51", size = 72991, upload-time = "2025-08-24T13:36:40.887Z" },
+]
+
+[[package]]
 name = "streamlit"
 version = "1.48.1"
 source = { registry = "https://pypi.org/simple" }
@@ -3915,6 +3987,22 @@ wheels = [
 ]
 
 [[package]]
+name = "torchmetrics"
+version = "1.8.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "lightning-utilities" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "numpy", version = "2.3.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "packaging" },
+    { name = "torch" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/78/1f/2cd9eb8f3390c3ec4693ac0871913d4b468964b3833638e4091a70817e0a/torchmetrics-1.8.1.tar.gz", hash = "sha256:04ca021105871637c5d34d0a286b3ab665a1e3d2b395e561f14188a96e862fdb", size = 580373, upload-time = "2025-08-07T20:44:44.631Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8f/59/5c1c1cb08c494621901cf549a543f87143019fac1e6dd191eb4630bbc8fb/torchmetrics-1.8.1-py3-none-any.whl", hash = "sha256:2437501351e0da3d294c71210ce8139b9c762b5e20604f7a051a725443db8f4b", size = 982961, upload-time = "2025-08-07T20:44:42.608Z" },
+]
+
+[[package]]
 name = "torchsummary"
 version = "1.5.1"
 source = { registry = "https://pypi.org/simple" }
@@ -4115,6 +4203,20 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/15/22/9ee70a2574a4f4599c47dd506532914ce044817c7752a79b6a51286319bc/urllib3-2.5.0.tar.gz", hash = "sha256:3fc47733c7e419d4bc3f6b3dc2b4f890bb743906a30d56ba4a5bfa4bbff92760", size = 393185, upload-time = "2025-06-18T14:07:41.644Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl", hash = "sha256:e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc", size = 129795, upload-time = "2025-06-18T14:07:40.39Z" },
+]
+
+[[package]]
+name = "uvicorn"
+version = "0.35.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+    { name = "h11" },
+    { name = "typing-extensions", marker = "python_full_version < '3.11'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5e/42/e0e305207bb88c6b8d3061399c6a961ffe5fbb7e2aa63c9234df7259e9cd/uvicorn-0.35.0.tar.gz", hash = "sha256:bc662f087f7cf2ce11a1d7fd70b90c9f98ef2e2831556dd078d131b96cc94a01", size = 78473, upload-time = "2025-06-28T16:15:46.058Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d2/e2/dc81b1bd1dcfe91735810265e9d26bc8ec5da45b4c0f6237e286819194c3/uvicorn-0.35.0-py3-none-any.whl", hash = "sha256:197535216b25ff9b785e29a0b79199f55222193d47f820816e7da751e9bc8d4a", size = 66406, upload-time = "2025-06-28T16:15:44.816Z" },
 ]
 
 [[package]]
